@@ -120,3 +120,58 @@ nginx-1.18.0-2.el7.ngx.x86_64
  ```
  
  
+## adding rule in OS level Firewall
+
+```
+60  systemctl status firewalld
+   61  firewall-cmd  --list-ports
+   62  firewall-cmd  --list-service
+   63  firewall-cmd --add-service=http
+   64  firewall-cmd  --list-service
+   
+```
+
+## after chaning nginx config 
+
+```
+nginx -t
+systemctl reload nginx
+
+```
+
+## checking logs 
+
+```
+cd  /var/log/nginx/
+
+cat  error.log 
+  129  ls
+  130  tail   -20  error.log 
+  131  tail   -5 error.log 
+  132  tail   -10  error.log  |   grep -i 103.22.142.182
+
+```
+
+## few more things for troubleshooting 
+
+```
+cat  /var/log/nginx/error.log 
+  152  vim /etc/nginx/conf.d/default.conf 
+  153  systemctl  restart  nginx 
+  154  cat  /var/log/nginx/error.log 
+  155  systemctl status rsyslog
+  156  history 
+  157  vim /etc/nginx/conf.d/default.conf 
+  158  nginx -t
+  159  vim /etc/nginx/conf.d/default.conf 
+  160  systemctl restart nginx 
+  161  history 
+  162  journalctl -u nginx 
+  163  journalctl -u nginx  -ex
+  164  journalctl -u nginx  
+  165  history 
+  166  journalctl -u root
+  167  journalctl -u nginx  
+  
+ ```
+ 
