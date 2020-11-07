@@ -58,14 +58,14 @@ redhat.repo  rh-cloud-eus.repo
 ## content of nginx.repo
 
 ```
-[root@ashunginxvm1 yum.repos.d]# cat  nginx.repo 
-[nginx-stable]
-name=nginx stable repo
-baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
-gpgcheck=1
+
+
+[root@ashunginxvm1 ~]# cat  /etc/yum.repos.d/n.repo 
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/rhel/7/$basearch/
+gpgcheck=0
 enabled=1
-gpgkey=https://nginx.org/keys/nginx_signing.key
-module_hotfixes=true
 [root@ashunginxvm1 yum.repos.d]# 
 
 ```
