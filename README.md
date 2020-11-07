@@ -175,3 +175,11 @@ cat  /var/log/nginx/error.log
   
  ```
  
+## Nginx as application layer load balancer 
+
+<img src="lb.png">
+
+## nginx as SSL 
+
+<img src="ssl.png">
+
