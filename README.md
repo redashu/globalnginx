@@ -70,4 +70,53 @@ enabled=1
 
 ```
 
+## installing 
 
+```
+ yum  install nginx -y
+ 
+```
+
+## configuration 
+
+```
+[root@ashunginxvm1 ~]# rpm -q  nginx 
+nginx-1.18.0-2.el7.ngx.x86_64
+[root@ashunginxvm1 ~]# rpm -ql   nginx 
+/etc/logrotate.d/nginx
+/etc/nginx
+/etc/nginx/conf.d
+/etc/nginx/conf.d/default.conf
+/etc/nginx/fastcgi_params
+/etc/nginx/koi-utf
+/etc/nginx/koi-win
+/etc/nginx/mime.types
+/etc/nginx/modules
+/etc/nginx/nginx.conf
+/etc/nginx/scgi_params
+/etc/nginx/uwsgi_params
+/etc/nginx/win-utf
+/etc/sysconfig/nginx
+/etc/sysconfig/nginx-debug
+/usr/lib/systemd/system/nginx-debug.service
+/usr/lib/systemd/system/nginx.service
+/usr/lib64/nginx
+
+```
+
+## nginx options 
+
+<img src="ngop.png">
+
+
+
+## starting nginx 
+
+```
+49  systemctl   start  nginx 
+   50  systemctl   status  nginx 
+   51  systemctl   enable   nginx
+   
+ ```
+ 
+ 
