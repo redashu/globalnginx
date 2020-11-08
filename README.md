@@ -76,3 +76,11 @@ server {
  
  ```
  
+## Nginx WAF 
+
+### to Secure web app level attacks like RCE | SQLi | XSS | LFI 
+
+# Steps 
+## Install development tools in RHEL 
+
+```
