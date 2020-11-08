@@ -63,5 +63,16 @@ server {
 
 ```
 
+## SSL in Nginx 
+
+<img src="sslset.png">
 
 
+### creating self sing certificates 
+
+```
+ cd /etc/ssl/nginx/ashuwebapp
+ openssl  req -x509 -nodes -days 365 -newkey rsa:2048  -keyout  ashuapp.key  -out ashuapp.cert
+ 
+ ```
+ 
